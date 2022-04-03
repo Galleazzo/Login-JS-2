@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+    <div id="form">
+        <h1>Seja bem vindo !!!</h1>
+        <p>Escreva os seus dados principais.</p>
+
+        <input type="text" placeholder="Nome" id="nome">
+        <input type="text" placeholder="Sobrenome" id="sob">
+
+        <input type="number" placeholder="Idade" id="idade">
+
+        <input type="email" placeholder="Email para contato" id="email">
+
+        <button onclick="enviar()">Enviar</button>
+
+    </div>
+
+    <p id="texto"></p>
+
+    <script>
+        function enviar(){
+
+            var nome=document.getElementById('nome')
+            var sob=document.getElementById('sob')
+            var idade=document.getElementById('idade')
+            var email=document.getElementById('email')
+            var texto=document.getElementById('texto')
+
+            var nome=String(nome.value)
+            var sob=String(sob.value)
+            var idade=Number(idade.value)
+            var email=String(email.value)
+
+            
+
+            texto.innerHTML=(`Ola ${nome} ${sob}!, voce tem ${idade} anos e seu email é ${email} `)
+        
+        }
+
+    </script>
+</body>
+</html>
